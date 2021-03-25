@@ -1,8 +1,6 @@
 var express=require('express');
 const util =require('util');
-//const basicAuth = require('express-basic-auth');
 var http = require('http');
-//var https=require('https');
 var options={
     host: 'rpaServer IP',
     port: 'rpaServer port number',
@@ -65,14 +63,13 @@ app.get('/:name',  async function(req,res){
         
                                              
                                            });
-               // request.end();
-        
+                       
         
             
             }
         
             catch(error){
-               // next(error);
+               Console.log("Kuyruklamada Hata alindi.");
         
             }
         
@@ -110,12 +107,12 @@ app.get('/:name',  async function(req,res){
     }
 
     catch(error){
-       // next(error);
+       Console.log("İlk Gönderimde Hata alindi.");
 
     }
 
     
 });
 
-app.listen(3001);
+app.listen("rpaServer port number");
 
